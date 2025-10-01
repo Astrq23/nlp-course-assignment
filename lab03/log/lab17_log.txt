@@ -1,0 +1,4 @@
+Start time: 2025-10-01 12:01:33.747978
+Input: c4-train.00000-of-01024-30K.json
+Output: results/lab17_pipeline_output.txt
+End time: 2025-10-01 12:01:33.748011
