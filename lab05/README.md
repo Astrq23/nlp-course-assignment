@@ -1,4 +1,4 @@
-# 🤖 Lab 5: Phân tích Cảm xúc Văn bản với PySpark
+# Lab 5: Phân tích Cảm xúc Văn bản với PySpark
 
 Dự án này thực hiện và so sánh các pipeline PySpark để phân tích cảm xúc. Trọng tâm là đánh giá hiệu suất của mô hình baseline so với các kỹ thuật cải tiến trên một bộ dữ liệu lớn.
 
@@ -9,7 +9,7 @@ So sánh 3 phương pháp:
 
 ---
 
-## 📝 Báo cáo và Phân tích Lab 5
+## Báo cáo và Phân tích Lab 5
 
 ### 1. Giải thích các bước thực thi
 
