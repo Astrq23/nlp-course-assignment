@@ -1,16 +1,14 @@
-# lab02
-## Lab 2: Count Vectorization
-### Các bước triển khai
-- Tạo interface `Vectorizer` trong `src/core/interfaces.py`.
-- Cài đặt `CountVectorizer` trong `src/representations/count_vectorizer.py`.
-- Tạo file `test/test.py` để chạy trên:
-  - Corpus mẫu.
-  - UD_English-EWT dataset.
-### Cách chạy code và ghi log kết quả
+## Lab 2: Triển khai Count Vectorization
+### Quy trình thực hiện
+- Định nghĩa một interface có tên `Vectorizer` tại `src/core/interfaces.py`.
+- Xây dựng lớp `CountVectorizer` tại `src/representations/count_vectorizer.py`.
+- Chuẩn bị tệp `test/test.py` để kiểm thử với:
+  - Một bộ corpus mẫu nhỏ.
+  - Bộ dữ liệu UD_English-EWT.
+### Hướng dẫn thực thi và ghi nhận kết quả
   ```
-  python -m test.test 
+    python -m test.test
   ```
-
 ### Kết quả chạy
 ```
 --------------------------------------------------
@@ -33,12 +31,13 @@ Document-Term Matrix:
 [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]
 [1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 2, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]
 ```
-### Giải thích kết quả
-- Corpus nhỏ: Ma trận document-term gọn, dễ hiểu, trực quan.
-- Dataset lớn (UD_English-EWT): Vocabulary lên tới hàng chục nghìn token, ma trận rất thưa, tăng độ phức tạp tính toán.
-- Bag-of-Words:
-+ Ưu điểm: Đơn giản, hiệu quả cho bài toán cơ bản.
-+ Hạn chế: Không giữ được ngữ cảnh hoặc thứ tự từ, làm mất thông tin ngữ nghĩa.
+### Phân tích kết quả
+- Với corpus mẫu (nhỏ): Ma trận thể hiện (document-term) có cấu trúc đơn giản, dễ dàng quan sát và nắm bắt.
+- Với bộ dữ liệu lớn (UD_English-EWT): Kích thước từ vựng (vocabulary) tăng lên đáng kể, dẫn đến ma trận biểu diễn rất thưa (sparse matrix) và làm gia tăng chi phí tính toán.
+- Nhận xét về Bag-of-Words (BoW):
+  - **Ưu điểm**: Là phương pháp đơn giản và mang lại hiệu quả đối với các tác vụ phân loại văn bản cơ bản.
+  - **Nhược điểm**: Bỏ qua thông tin về trật tự từ và ngữ cảnh, dẫn đến việc làm mất mát thông tin ngữ nghĩa quan trọng.
 
-## Khó khăn và cách giải quyết
-- import module/package: Gây lúng túng lúc đầu và mất khá nhiều thời gian tìm hiểu về lỗi. Kinh nghiệm rút ra được là cần chú ý kỹ về cấu trúc package cũng như đường dẫn
+## Thách thức và giải pháp
+- **Vấn đề**: Việc `import` các module/package ban đầu gây nhiều bối rối và tốn thời gian để tìm hiểu, khắc phục lỗi.
+- **Giải pháp/Kinh nghiệm**: Cần phải đặc biệt chú ý đến cấu trúc thư mục (package) và cách thiết lập đường dẫn (path) sao cho chính xác.
